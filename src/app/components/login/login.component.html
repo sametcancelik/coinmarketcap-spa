@@ -1,0 +1,16 @@
+<body class="text-center">
+    <main class="form-signin">
+      <form [formGroup]="loginForm">
+        <div class="form-floating">
+          <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="example@example.com" autocomplete="off"/>
+          <label for="email">Email</label>
+        </div>
+        <div class="mt-3 form-floating">
+          <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+          <label for="floatingPassword">Password</label>
+        </div>
+        <button class="mt-2 w-100 btn btn-lg btn-primary" (click)="login()">Login</button>
+        <a href="/register" class="mt-2 w-100 btn btn-lg" style="background-color: #96a825 !important;color:white">Sign Up</a>
+      </form>
+    </main>
+  </body>

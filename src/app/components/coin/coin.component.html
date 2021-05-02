@@ -1,0 +1,28 @@
+<a *ngIf="isAuthenticated" class="btn btn-sm btn-primary mt-3 mb-3" style="float: right;" aria-current="page" [routerLink]="" (click)="logOut()">Logout</a>
+
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr style="background-color:#96a825 !important;color:white">
+            <th>Symbol</th>
+            <th>Coin</th>
+            <th>Price</th>
+            <th>24h %</th>
+            <th>7d %</th>
+            <th>Market Cap</th>
+            <th>Volume(24h)</th>
+            <th>Circulating Supply</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let coin of coins">
+            <th>{{coin.symbol}} <i class="fa fa-eye"></i></th>
+            <td>{{coin.name}}</td>
+            <td>{{coin.quote.USD.price | currency }}</td>
+            <td>{{coin.quote.USD.percent_change_24h | percent }}</td>
+            <td>{{coin.quote.USD.percent_change_7d | percent }}</td>
+            <td>{{coin.quote.USD.market_cap | currency }}</td>
+            <td>{{coin.quote.USD.volume_24h | currency }}</td>
+            <td>{{coin.circulating_supply | number }} {{ coin.symbol }}</td>
+        </tr>
+    </tbody>
+</table>

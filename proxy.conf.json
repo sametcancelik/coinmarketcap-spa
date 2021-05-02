@@ -1,0 +1,7 @@
+{
+    "/cryptocurrency/*": {
+      "target": "https://pro-api.coinmarketcap.com/v1",
+      "secure": false,
+      "changeOrigin": true
+    }
+}
